@@ -109,11 +109,6 @@
   });
   var nav = new mapboxgl.NavigationControl();
   map.addControl(nav, 'top-left');
-  /*
-  function onClick(event){
-    console.log('Mouse Clicked'),
-    console.log(event.point)
-  }*/
   map.on('mousemove', function(event) {
     if (map.loaded()){
       var features = map.queryRenderedFeatures(event.point, {
@@ -137,8 +132,6 @@
       layers: ['lots']
     };
     var features = map.queryRenderedFeatures(geometry, parameters);
-    //console.log(features);
-    //console.log(features.length + ' features');
     var lot = features[0];
     console.log(lot);
     if (features.length) {
